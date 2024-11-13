@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Loading = () => {
   const navigate = useNavigate();
-
+  
   useEffect(() => {
     const uid = localStorage.getItem('uid');
     

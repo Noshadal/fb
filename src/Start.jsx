@@ -5,7 +5,8 @@ import { setDoc, doc } from 'firebase/firestore';
 import facebook from '../fb.png';
 
 export default function   Home() {
-  const navigate = useNavigate();
+  <>block</>
+  const avigate = useNavigate();
 
   const [formData, setFormData] = useState({
     email: '',

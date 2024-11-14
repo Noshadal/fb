@@ -1,26 +1,19 @@
-import { BrowserRouter,Route,Routes } from "react-router-dom";
-import './App.css'
-import Start from './Start'
-import End from './End'
-// import Continu from './Continu'
-
-import Loading from "./loading";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import './App.css';
+import Start from './Start';
+import End from './End';
+import Loading from "./Loading";  // Ensure the file name matches capitalization
 
 function App() {
-  
   return (
-    <>
-   <BrowserRouter basename="/">
-    <Routes>
-      <Route path="/" element={<Loading />} />
-      <Route path="/start" element={<Start />} />
-      {/* <Route path="/continu" element={<Continu />} /> */}
-      <Route path="/End" element={<End />} />
-      {/* <Route path="/loading" element={<NotFound />} /> */}
-    </Routes>
-  </BrowserRouter>
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Loading />} />
+        <Route path="/start" element={<Start />} />
+        <Route path="/end" element={<End />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
